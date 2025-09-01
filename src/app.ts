@@ -16,6 +16,6 @@ app.use(express.static(path.join(__dirname, '../public')))
 
 // Rotas
 app.use(routers)
-app.use((request, response) => response.send('NOT FOUND'))
+app.use((request, response) => response.render('pages/404'))
 
 app.listen(process.env.PORT)
